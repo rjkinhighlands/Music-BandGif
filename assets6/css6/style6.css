@@ -1,0 +1,59 @@
+body{
+	background: url('../images6/livebands.jpg');
+}
+
+img{
+	max-height: 300px;
+}
+
+form, .artistBtn{
+	background-color: black;
+	color: orange;
+}
+
+form{
+	padding: 10px;
+	margin: 20px;
+}
+h1{
+	font-size: 15px;
+	color: white;
+	margin: 550px;
+}
+
+#newArtistInput{
+	color: black;
+}
+
+.ratingStyle{
+	color: orange;
+	background-color: black;
+}
+
+#addArtist{
+	background-color: grey;
+	color: orange;
+	border: none;
+}
+
+input{
+	margin: 10px;
+}
+
+button{
+	background-color: black;
+	border: none;
+}
+
+#musician{
+	margin: 10px;
+}
+
+.artistBtn{
+	padding: 6px;
+	margin: 3px;
+}
+
+#giphyLogo{
+	margin: 550px;
+}
