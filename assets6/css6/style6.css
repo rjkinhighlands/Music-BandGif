@@ -14,11 +14,12 @@ form, .artistBtn{
 form{
 	padding: 10px;
 	margin: 20px;
+	width: 200px;
 }
 h1{
 	font-size: 15px;
 	color: white;
-	margin: 550px;
+	margin: 0 0 0 550px;
 }
 
 #newArtistInput{
@@ -33,7 +34,6 @@ h1{
 #addArtist{
 	background-color: grey;
 	color: orange;
-	border: none;
 }
 
 input{
@@ -51,7 +51,7 @@ button{
 
 .artistBtn{
 	padding: 6px;
-	margin: 3px;
+	margin: 10px;
 }
 
 #giphyLogo{

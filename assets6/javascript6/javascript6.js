@@ -1,5 +1,5 @@
 var artistTitle = ['David Bowie', 'Bob Dylan', 'The Beastie Boys', 'The Rolling Stones', 'Donald Fagen', 'Paul McCartney', 'Bob Marley', 'Elvis Presley'];
-var currentGif;var pausedGif; var animatedGif; var stillGif;
+var currentGif; var pausedGif; var animatedGif; var stillGif;
 
 // BUTTONS //
 
@@ -10,6 +10,7 @@ function createButtons(){
 		$('#artistBtn').append(artistBtn);
 	}
 }	
+
 // GIFS //
 
 	$(document).on('click', '.artistBtn', function(){
