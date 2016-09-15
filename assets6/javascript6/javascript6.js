@@ -1,5 +1,6 @@
-var artistTitle = ['David Bowie', 'Bob Dylan', 'The Beastie Boys', 'The Rolling Stones', 'Donald Fagen', 'Paul McCartney', 'Bob Marley', 'Elvis Presley'];
+var artistTitle = ['David Bowie', 'Bob Dylan', 'Donald Fagen', 'Mick Jagger', 'Bob Marley', 'Paul McCartney', 'Elvis Presley'];
 var currentGif; var pausedGif; var animatedGif; var stillGif;
+var theme = new Audio("assets6/sounds6/rockandroll.m4a");
 
 // BUTTONS //
 
@@ -8,6 +9,8 @@ function createButtons(){
 	for(var i = 0; i < artistTitle.length; i++){
 		var artistBtn = $('<button>').text(artistTitle[i]).addClass('artistBtn').attr({'data-name': artistTitle[i]});
 		$('#artistBtn').append(artistBtn);
+		var theme = new Audio("assets6/sounds6/rockandroll.m4a");
+		theme.play();
 	}
 }	
 
@@ -17,7 +20,7 @@ function createButtons(){
 		$('.display').empty();
 		
 		var thisArtist = $(this).data('name');
-										// console.log (thisArtist) //
+										
 		var giphyURL = "http://api.giphy.com/v1/gifs/search?q=music" + thisArtist + "&limit=10&api_key=dc6zaTOxFJmzC";
 		$.ajax({url: giphyURL, method: 'GET'}).done(function(giphy){
 			currentGif = giphy.data;
@@ -58,9 +61,13 @@ $(document).on('mouseleave','.playOnHover', function(){
 $('#addArtist').on('click', function(){
 	var newArtistInput = $('#newArtistInput').val().trim();
 	artistTitle.push(newArtistInput);
-									//console.log (artistTitle);//
+
 	createButtons();
+	
 	return false;
+
+	//$("#newArtistInput")[0].reset();
+	//$('#newArtistInput').empty();
 });
 
 createButtons();
