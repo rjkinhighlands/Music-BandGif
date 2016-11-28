@@ -58,16 +58,14 @@ $(document).on('mouseleave','.playOnHover', function(){
 
 // INPUT //
 
-$('#addArtist').on('click', function(){
+$('#addArtist').on('click', function(e){
+	e.preventDefault();
 	var newArtistInput = $('#newArtistInput').val().trim();
 	artistTitle.push(newArtistInput);
-
+	$('#newArtistInput').val(" ");
+	console.log(artistTitle);
 	createButtons();
 	
-	return false;
-
-	//$("#newArtistInput")[0].reset();
-	//$('#newArtistInput').empty();
 });
 
 createButtons();
